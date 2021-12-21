@@ -1,0 +1,28 @@
+body{
+    background-color: #FBFBF2;
+}
+
+#formDiv{
+    display: none;
+    position: fixed;
+    right: 0;
+    padding: 15px;
+    color: #FBFBF2;
+    width: 30%;
+    height: 50%;
+    background-color: #847577;
+    border-radius: 10px;
+}
+#submit{
+    background-color: #FBFBF2;
+}
+
+#submit:hover{
+    background-color: #A6A2A2;
+}
+
+#submitDiv{
+    width: 100%;
+    text-align: center;
+}
+
