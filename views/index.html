@@ -17,7 +17,9 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/e15deb6511.js" crossorigin="anonymous"></script>
+    <script src="../js/index.js"></script>
     <link rel="stylesheet" href="../styles/index.css">
     <link rel="stylesheet" href="../styles/navbar.css">
 </head>
@@ -56,7 +58,7 @@
             </ul>
             <form class="form-inline my-2 my-lg-0">
                 <input id="search" type="search" placeholder="Search">
-                <a onclick="showRegister()" id="iconA" href="#"><i id="signup" class="far fa-user fa-lg"></i></a>
+                <a id="iconA"><i id="signup" class="far fa-user fa-lg"></i></a>
                 <!-- <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button> -->
             </form>
         </div>
@@ -82,24 +84,36 @@
                 <button id="submit" type="submit" class="btn">Register</button>
             </div>
             <div style="padding: 10px;width: 100%;text-align: center;">
-                <p>İf you already have an account, click <a style="text-decoration: none;color: black;"
+                <p>İf you already have an account, click <a id="login" style="text-decoration: none;color: black;"
                         href="#">here</a>
                     for the login.</p>
             </div>
         </form>
     </div>
-</body>
-<script>
-    function showRegister() {
-        var register = document.getElementById("formDiv")
-        if (register.style.display == "block") {
-            register.style.display = "none"
-        }
-        else {
-            register.style.display = "block"
-        }
 
-    }
-</script>
+    <div id="formDivLogin">
+        <form>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Email address</label>
+                <input type="email" class="form-control was-validated" id="exampleInputEmail1"
+                    aria-describedby="emailHelp" placeholder="Enter email">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Password</label>
+                <input type="password" class="form-control was-validated" id="exampleInputPassword1"
+                    placeholder="Password">
+            </div>
+            <div id="submitDiv">
+                <button id="submit" type="submit" class="btn">Login</button>
+            </div>
+            <div style="padding: 10px;width: 100%;text-align: center;">
+                <p>İf you don't have any account, click <a id="register" style="text-decoration: none;color: black;"
+                        href="#">here</a>
+                    for the register.</p>
+            </div>
+        </form>
+    </div>
+
+</body>
 
 </html>
